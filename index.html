@@ -1,1 +1,247 @@
-<p>hello mother whata</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ignite Podcast - Episode 1</title>
+    <style>
+        h5{
+            color:#999
+        }
+        header,footer{
+            border-radius:30px;
+            bordver:1px solid red;
+            padding:15px;
+        }
+        *{
+            text-align:center;
+        }
+      /*  body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, rgba(255,0,0,0.5), rgba(0,0,255,0.5)),
+              linear-gradient(225deg, rgba(0,255,0,0.5), rgba(255,255,0,0.5));
+            color: #333;
+        }
+        
+        */
+        
+        body{
+             background: 
+    linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+    linear-gradient(225deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    linear-gradient(315deg, rgba(128,128,128,0.5), rgba(128,128,128,0.5));
+  background-blend-mode: multiply;
+        }
+        
+        
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #ddd 3px solid;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .episode {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .episode h2 {
+            margin-top: 0;
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .hidden {
+            display: none;
+        }    .container p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        color: #555;
+    }
+    .share-btn {
+    
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(45deg, #ffeb3b, #f44336);;
+        color: #000;
+        border-radius: 50%;
+        text-align: center;
+        border: 5px solid #2b2;
+        cursor: pointer;
+        font-size: 1.5em;
+        font-weight: bold;
+        position: relative;
+        transition: background 0.3s, transform 0.3s, border-color 0.3s;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+    .share-btn::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+        border-left: 40px solid white;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+    }
+    .share-btn:hover {
+        background: #1EBEA5;
+        border-color: #25D366;
+        transform: scale(1.1);
+    }
+    .share-btn:focus {
+        outline:none;
+    }
+    .share-btn span {
+        position: relative;
+        z-index: 1;
+        
+    }  
+    
+    footer {
+        background-color:rgba(2,2,2,0.4);
+        font-size:13px
+    }
+    footer a {
+    color:#666;
+    text-decoration:none;
+    }
+    </style>
+</head>
+
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z34P7YSD41"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-Z34P7YSD41'); </script>
+
+
+
+<body>
+    <header>
+        <div class="container">
+            <h1>ignite podcast</h1>
+            <p style ="color:gray">Episode 1: Mental health </p>
+            <h5>In this episode, seasoned conversationalists indulge on mental health, common misconceptions,why you should care and the other things you must know about </h5>
+        </div>
+    </header>
+
+    <div  id="container">
+        <p id="randomText">To listen to the podcast, please share this page on WhatsApp.</p>
+        <button class="share-btn" onclick="shareOnWhatsApp()">
+            <span> </span>
+        </button>
+</div>
+
+        <div id="podcast-content" class="hidden">
+            <div class="episode">
+                <h2>Part 1: Intro</h2>
+                <audio id="part1" controls>
+                    <source src="https://www.soundjay.com/button/beep-07.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="episode">
+                <h2>Part 2: personal opinion</h2>
+                <audio id="part2" controls>
+                    <source src="https://www.soundjay.com/button/beep-08.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="episode">
+                <h2>Part 3: outro</h2>
+                <audio id="part3" controls>
+                    <source src="https://www.soundjay.com/button/beep-09.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="episode">
+                <h2>Part 4: last one</h2>
+                <audio id="part4" controls>
+                    <source src="https://www.soundjay.com/button/beep-10.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+    
+    <footer style="text-decoration: none;">
+    <h3> what do you think the next topic should be? let us know</h3>
+    <a href="https://wa.me/1234567890?text=Hello%20there!">Chat on WhatsApp</a>
+    <br />
+     <a href="https://x.com/THEABAH0?t=4cX4u1klHs0v9nLzennXgA&s=09"> follow on X </a>
+     <br />
+    <a href="tel:256762959404" >make a phone call</a>
+    <br />
+    <a href="mailto:prosper.abaho.ug@gmail.com">write an email</a>
+    
+    
+    <br /> <br />
+     Just a friendly reminder: this is for general info and fun discussions, not professional advice. If you need real help, please reach out to a mental health professional. Thanks for listening!
+</footer>
+
+<script>
+// Define the texts
+const texts = ["before you can listen to this podcast, hit this button to share on whatsapp status. just to spread the love", "To listen, hit button to share to whatsapp status for others to get the message and entertainment too"];
+
+// Select a random index
+const randomIndex = Math.floor(Math.random() * texts.length);
+
+// Get the <p> element
+const pElement = document.getElementById('randomText');
+
+// Set the text of the <p> element
+pElement.textContent = texts[randomIndex];
+</script>
+
+    <script>
+        function shareOnWhatsApp() {
+        document.getElementById("container")
+            .style.display="none";
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Check out this podcast episode I found interesting: ' + url);
+           const whatsappUrl = https://wa.me/?text=${text};
+            window.open(whatsappUrl, '_blank');                     
+            setTimeout(function(){document.getElementById('podcast-content').classList.remove('hidden');   
+                },5000);
+                
+                
+        }
+
+        document.getElementById('part1').addEventListener('ended', function() {
+            document.getElementById('part2').play();
+        });
+
+        document.getElementById('part2').addEventListener('ended', function() {
+            document.getElementById('part3').play();
+        });
+
+        document.getElementById('part3').addEventListener('ended', function() {
+            document.getElementById('part4').play();
+        });
+    </script>
+</body>
+</html>
