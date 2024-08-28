@@ -6,11 +6,11 @@
     <title>ignite Podcast - Episode 1</title>
     <style>
         h5{
-            color:#999
+            color:#999;
         }
         header,footer{
             border-radius:30px;
-            bordver:1px solid red;
+            /*bordver:1px solid red;*/
             padding:15px;
         }
         *{
@@ -140,7 +140,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>ignite podcast</h1>
+            <h1>the ignite podcast</h1>
             <p style ="color:gray">Episode 1: Mental health </p>
             <h5>In this episode, seasoned conversationalists indulge on mental health, common misconceptions,why you should care and the other things you must know about </h5>
         </div>
@@ -153,38 +153,64 @@
         </button>
 </div>
 
-        <div id="podcast-content" class="hidden">
+        <div id="podcast-content" class="hhidden"><!--later unhide-->
             <div class="episode">
-                <h2>Part 1: Intro</h2>
+                <h2>Part 1: INTRO</h2>
                 <audio id="part1" controls>
-                    <source src="https://www.soundjay.com/button/beep-07.wav" type="audio/wav">
+                    <source src="audios/Podcast 1 final..mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div>
 
             <div class="episode">
-                <h2>Part 2: personal opinion</h2>
+                <h2>Part 2: MENTAL ILLNESS VS MADNESS</h2>
                 <audio id="part2" controls>
-                    <source src="https://www.soundjay.com/button/beep-08.wav" type="audio/wav">
+                    <source src="audios/Podcast 2 final.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div>
 
             <div class="episode">
-                <h2>Part 3: outro</h2>
+                <h2>Part 3: THERE WILL BE SIGNS</h2>
                 <audio id="part3" controls>
-                    <source src="https://www.soundjay.com/button/beep-09.wav" type="audio/wav">
+                    <source src="audios/Podcast 3 final.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div>
 
             <div class="episode">
-                <h2>Part 4: last one</h2>
+                <h2>Part 4: WHERE YOU ARE </h2>
                 <audio id="part4" controls>
-                    <source src="https://www.soundjay.com/button/beep-10.wav" type="audio/wav">
+                    <source src="audios/podcast 4 final.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div>
+
+            <div class="episode">
+                <h2>Part 5: CAUSES</h2>
+                <audio id="part1" controls>
+                    <source src="audios/Podcast 5 final.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="episode">
+                <h2>Part 6: FEARING MEDICINE? </h2>
+                <audio id="part1" controls>
+                    <source src="audios/Podcast 6 final (1).mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="episode">
+                <h2>Part 7: FACTS</h2>
+                <audio id="part1" controls>
+                    <source src="audios/Podcast 7 final (1).mp3" type="audio/mp3s">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            
         </div>
     </div>
     
@@ -205,7 +231,7 @@
 
 <script>
 // Define the texts
-const texts = ["before you can listen to this podcast, hit this button to share on whatsapp status. just to spread the love", "To listen, hit button to share to whatsapp status for others to get the message and entertainment too"];
+const texts = ["to be able to listen, click here first  to share to atleast two whatsapp groups.","before you can listen to this podcast, hit this button to share on whatsapp status. just to spread the love", "To listen, hit button to share to whatsapp status for others to get the message and entertainment too"];
 
 // Select a random index
 const randomIndex = Math.floor(Math.random() * texts.length);
@@ -223,7 +249,7 @@ pElement.textContent = texts[randomIndex];
             .style.display="none";
             const url = encodeURIComponent(window.location.href);
             const text = encodeURIComponent('Check out this podcast episode I found interesting: ' + url);
-           const whatsappUrl = https://wa.me/?text=${text};
+           const whatsappUrl = `https://wa.me/?text=${text}`;
             window.open(whatsappUrl, '_blank');                     
             setTimeout(function(){document.getElementById('podcast-content').classList.remove('hidden');   
                 },5000);
