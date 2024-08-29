@@ -211,7 +211,7 @@ body{
         <button class="share-btn" onclick="shareOnWhatsApp()">
             <span> </span>
         </button>
-</div>
+     </div>
 
         <div id="podcast-content" class="hidden"><!--later unhide-->
             <div class="episode" id="part1">
@@ -290,6 +290,11 @@ body{
 </footer>
 
 <script>
+     
+      document.getElementById("container").style.display = localStorage.getItem('shared') ? 'none' : 'block';
+        
+        document.getElementById("podcast-content").style.display = localStorage.getItem('shared') ? 'block' : 'none';
+        
     // only for testing purposes
     //setTimeout(function(){ window. location. reload(); }, 5000);
 // Define the texts
@@ -306,19 +311,44 @@ pElement.textContent = texts[randomIndex];
 </script>
 
     <script>
-        function shareOnWhatsApp() {
-        document.getElementById("container")
-            .style.display="none";
-            const url = encodeURIComponent(window.location.href);
-            const text = encodeURIComponent('Check out this podcast episode I found interesting: ' + url);
-           const whatsappUrl = `https://wa.me/?text=${text}`;
-            window.open(whatsappUrl, '_blank');                     
-            setTimeout(function(){document.getElementById('podcast-content').classList.remove('hidden');   
-                },5000);
-                
-                
-        }
+  document.getElementById("container").style.display = localStorage.getItem('shared') ? 'none' : 'block';
+        
+  document.getElementById("podcast-content").style.display = localStorage.getItem('shared') ? 'block' : 'none';
+        setTimeout(function(){
+            localStorage.clear();
+        }, 100000);
 
+        function shareOnWhatsApp() {
+
+            
+localStorage.setItem('shared', 1);
+    document.getElementById("container")
+    .style.display="none";
+
+                        
+let hasAlreadyShared = localStorage.getItem('shared');
+
+if (hasAlreadyShared==1) {
+// User hasn't shared yet, so share and store it
+localStorage.setItem('shared', 1);
+document.getElementById("container").style.display = "none";
+setTimeout(function(){document.getElementById('podcast-content').style.display='block'; }, 3000);
+
+
+const url = "https://theabaho.github.io/ignite";
+const text = 'Check out this podcast episode I found interesting:  ' + url;
+const whatsappUrl = `https://wa.me/?text=${text}`;
+window.open(whatsappUrl, '_blank');
+}
+}
+
+        document.getElementById("container").style.display = localStorage.getItem('shared') ? 'none' : 'block';
+        
+        document.getElementById("podcast-content").style.display = localStorage.getItem('shared') ? 'block' : 'none';
+        
+
+
+//playback shiii
         document.getElementById('part1').addEventListener('ended', function() {
             document.getElementById('part2').play();
         });
@@ -330,6 +360,9 @@ pElement.textContent = texts[randomIndex];
         document.getElementById('part3').addEventListener('ended', function() {
             document.getElementById('part4').play();
         });
+
+        
+
     </script>
 </body>
 </html>
