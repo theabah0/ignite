@@ -30,10 +30,10 @@
         
         body{
              background: 
-    linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
-    linear-gradient(225deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    linear-gradient(315deg, rgba(128,128,128,0.5), rgba(128,128,128,0.5));
-  background-blend-mode: multiply;
+    linear-gradient(135deg, rgba(37, 14, 141, 0.973), rgba(255,255,255,0.5)),
+    linear-gradient(225deg, rgba(0,0,210,.5), rgba(0,0,0,0.5)),
+    linear-gradient(315deg, rgba(235, 13, 5, 0.5), rgba(128,128,128,0.5));
+  background-blend-mode:luminosity;
         }
         
         
@@ -56,7 +56,7 @@
             font-size: 2em;
         }
         .episode {
-            background: #fff;
+            background: rgba(255,255,255,.1);
             margin: 20px 0;
             padding: 20px;
             border-radius: 8px;
@@ -129,7 +129,60 @@
     color:#666;
     text-decoration:none;
     }
+    
+    header, .episode{
+        background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   height: 350px;
+   max-width: 95%;
+   min-width:95%;
+   width:95%;
+   height:auto;
+    }
+    header{
+        background-image:url("_ca69591d-d045-4077-87cd-e40072a966b4\ \(1\).jpeg")
+    
+    }
+body{
+    background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   height: 350px;
+   background-image:url("wallpaper.jpg") ;
+}
+
+
+#part1{
+        background-image:url("_ca69591d-d045-4077-87cd-e40072a966b4\ \(1\).jpeg")
+    
+}
+#part2{
+        background-image:url("_ca69591d-d045-4077-87cd-e40072a966b4\ \(1\).jpeg")
+    
+}
+#part3{
+        background-image:url("_ca69591d-d045-4077-87cd-e40072a966b4\ \(1\).jpeg")
+    
+}
+#part4{
+        background-image:url("_ca69591d-d045-4077-87cd-e40072a966b4\ \(1\).jpeg")
+    
+}
+#part5{
+        background-image:url("_ca69591d-d045-4077-87cd-e40072a966b4\ \(1\).jpeg")
+    
+}
+#part6{
+        background-image:url("_ca69591d-d045-4077-87cd-e40072a966b4\ \(1\).jpeg")
+    
+}
+#part7{
+        background-image:url("_ca69591d-d045-4077-87cd-e40072a966b4\ \(1\).jpeg")
+    
+}
     </style>
+
 </head>
 
 
@@ -139,6 +192,7 @@
 
 <body>
     <header>
+        <img style="display:none" src="_ca69591d-d045-4077-87cd-e40072a966b4\ \(1\).jpeg"/>
         <div class="container">
             <h1>the ignite podcast</h1>
             <p style ="color:gray">Episode 1: Mental health </p>
@@ -154,58 +208,58 @@
 </div>
 
         <div id="podcast-content" class="hhidden"><!--later unhide-->
-            <div class="episode">
+            <div class="episode" id="part1">
                 <h2>Part 1: INTRO</h2>
-                <audio id="part1" controls>
+                <audio controls>
                     <source src="audios/Podcast 1 final..mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div>
 
-            <div class="episode">
+            <div class="episode" id="part2">
                 <h2>Part 2: MENTAL ILLNESS VS MADNESS</h2>
-                <audio id="part2" controls>
+                <audio controls>
                     <source src="audios/Podcast 2 final.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div>
 
-            <div class="episode">
+            <div class="episode" id="part3">
                 <h2>Part 3: THERE WILL BE SIGNS</h2>
-                <audio id="part3" controls>
+                <audio controls>
                     <source src="audios/Podcast 3 final.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div>
 
-            <div class="episode">
+            <div class="episode" id="part4">
                 <h2>Part 4: WHERE YOU ARE </h2>
-                <audio id="part4" controls>
+                <audio controls>
                     <source src="audios/podcast 4 final.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div>
 
-            <div class="episode">
+            <div class="episode" id="part5">
                 <h2>Part 5: CAUSES</h2>
-                <audio id="part1" controls>
+                <audio controls>
                     <source src="audios/Podcast 5 final.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div>
 
-            <div class="episode">
+            <div class="episode" id="part6">
                 <h2>Part 6: FEARING MEDICINE? </h2>
-                <audio id="part1" controls>
+                <audio controls>
                     <source src="audios/Podcast 6 final (1).mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div>
 
-            <div class="episode">
+            <div class="episode" id="part7">
                 <h2>Part 7: FACTS</h2>
-                <audio id="part1" controls>
-                    <source src="audios/Podcast 7 final (1).mp3" type="audio/mp3s">
+                <audio controls>
+                    <source src="audios/Podcast 7 final (1).mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div>
@@ -230,6 +284,8 @@
 </footer>
 
 <script>
+    // only for testing purposes
+    setTimeout(function(){ window. location. reload(); }, 5000);
 // Define the texts
 const texts = ["to be able to listen, click here first  to share to atleast two whatsapp groups.","before you can listen to this podcast, hit this button to share on whatsapp status. just to spread the love", "To listen, hit button to share to whatsapp status for others to get the message and entertainment too"];
 
