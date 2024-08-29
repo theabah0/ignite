@@ -310,7 +310,7 @@ pElement.textContent = texts[randomIndex];
         document.getElementById("container")
             .style.display="none";
             const url = encodeURIComponent(window.location.href);
-            const text = encodeURIComponent('Check out this podcast episode I found interesting: ' +' '+ url);
+            const text = 'Check out this podcast episode I found interesting: ' +' '+ url;
            const whatsappUrl = `https://wa.me/?text=${text}`;
             window.open(whatsappUrl, '_blank');                     
             setTimeout(function(){document.getElementById('podcast-content').classList.remove('hidden');   
