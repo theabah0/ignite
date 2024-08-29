@@ -311,12 +311,14 @@ pElement.textContent = texts[randomIndex];
 </script>
 
     <script>
+
   document.getElementById("container").style.display = localStorage.getItem('shared') ? 'none' : 'block';
         
   document.getElementById("podcast-content").style.display = localStorage.getItem('shared') ? 'block' : 'none';
         setTimeout(function(){
             localStorage.clear();
         }, 100000);
+
 
         function shareOnWhatsApp() {
 
