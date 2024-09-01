@@ -71,7 +71,7 @@
             margin-top: 10px;
         }
         .hidden {
-            display: none;
+            /*display: none;*/
         }    .container p {
         font-size: 1.2em;
         margin-bottom: 20px;
@@ -297,14 +297,15 @@ body{
 
 
 
-      document.getElementById("container").style.display = localStorage.getItem('shared') ? 'none' : 'block';
+    //  document.getElementById("container").style.display = localStorage.getItem('shared') ? 'none' : 'block';
         
-        document.getElementById("podcast-content").style.display = localStorage.getItem('shared') ? 'block' : 'none';
+       // document.getElementById("podcast-content").style.display = localStorage.getItem('shared') ? 'block' : 'none';
         
     // only for testing purposes
     //setTimeout(function(){ window. location. reload(); }, 5000);
 // Define the texts
-const texts = ["before you can listen to this podcast, hit this button to share on whatsapp status. just to spread the love",
+    const texts = ["click this button to share on whatsapp","click here to share"];
+//const texts = ["before you can listen to this podcast, hit this button to share on whatsapp status. just to spread the love",
  "To listen, hit button to share to whatsapp status for others to get the message and entertainment too",
  "before you can listen to this podcast, hit this button to share on whatsapp status. just to spread the love",
   "To listen, hit button to share to whatsapp status for others to get the message and entertainment too",
@@ -331,9 +332,9 @@ pElement.textContent = texts[randomIndex];
 
     <script>
 
-  document.getElementById("container").style.display = localStorage.getItem('shared') ? 'none' : 'block';
+  //document.getElementById("container").style.display = localStorage.getItem('shared') ? 'none' : 'block';
         
-  document.getElementById("podcast-content").style.display = localStorage.getItem('shared') ? 'block' : 'none';
+  //document.getElementById("podcast-content").style.display = localStorage.getItem('shared') ? 'block' : 'none';
         setTimeout(function(){
             localStorage.clear();
         }, 100000);
@@ -343,8 +344,8 @@ pElement.textContent = texts[randomIndex];
 
             
 localStorage.setItem('shared', 1);
-    document.getElementById("container")
-    .style.display="none";
+   // document.getElementById("container")
+   // .style.display="none";
 
                         
 let hasAlreadyShared = localStorage.getItem('shared');
@@ -352,8 +353,8 @@ let hasAlreadyShared = localStorage.getItem('shared');
 if (hasAlreadyShared==1) {
 // User hasn't shared yet, so share and store it
 localStorage.setItem('shared', 1);
-document.getElementById("container").style.display = "none";
-setTimeout(function(){document.getElementById('podcast-content').style.display='block'; }, 3000);
+//document.getElementById("container").style.display = "none";
+//setTimeout(function(){document.getElementById('podcast-content').style.display='block'; }, 3000);
 
 
 const url = "https://theabah0.github.io/ignite";
@@ -363,9 +364,9 @@ window.open(whatsappUrl, '_blank');
 }
 }
 
-        document.getElementById("container").style.display = localStorage.getItem('shared') ? 'none' : 'block';
+       // document.getElementById("container").style.display = localStorage.getItem('shared') ? 'none' : 'block';
         
-        document.getElementById("podcast-content").style.display = localStorage.getItem('shared') ? 'block' : 'none';
+       // document.getElementById("podcast-content").style.display = localStorage.getItem('shared') ? 'block' : 'none';
         
 
 
